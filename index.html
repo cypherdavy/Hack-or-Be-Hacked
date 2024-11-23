@@ -3,77 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hack or Be Hacked - An Educational Hacking Game</title>
+    <title>Hack or Get Hacked - SQL Injection CTF</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="game.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Welcome to Hack or Be Hacked</h1>
-        <p>Your mission: Learn cybersecurity concepts through challenges and puzzles.</p>
+        <h1>Welcome to the "Hack or Get Hacked" CTF!</h1>
+        <p>Your task is to exploit a vulnerable SQL query and capture the flag.</p>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#intro">Introduction</a></li>
-            <li><a href="#challenges">Challenges</a></li>
-            <li><a href="#leaderboard">Leaderboard</a></li>
-            <li><a href="#resources">Resources</a></li>
-        </ul>
-    </nav>
+    <main>
+        <section>
+            <h2>Challenge Instructions</h2>
+            <p>This challenge demonstrates the power of SQL Injection. Your goal is to break into the database and extract the flag using an SQL injection attack.</p>
+            <p>To begin, enter a sample username and password in the form below and exploit the SQL query to reveal the secret flag.</p>
+            <form action="/submit" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
 
-    <section id="intro">
-        <h2>Introduction</h2>
-        <p>In this game, you will navigate through various cybersecurity scenarios where your knowledge will be tested. Each challenge will help you understand key concepts such as encryption, penetration testing, and vulnerability assessment.</p>
-        <p>Ready to hack? Let's begin!</p>
-    </section>
-
-    <section id="challenges">
-        <h2>Challenges</h2>
-        <p>Each challenge contains a series of tasks and puzzles. Solve them to progress to the next level.</p>
-
-        <div class="challenge">
-            <h3>Challenge 1: SQL Injection</h3>
-            <p>Learn how attackers exploit SQL vulnerabilities. Your task is to bypass the login page by injecting SQL code into the input fields.</p>
-            <button onclick="startChallenge('sql_injection')">Start Challenge</button>
-        </div>
-
-        <div class="challenge">
-            <h3>Challenge 2: Password Cracking</h3>
-            <p>Learn about password hashing and cracking techniques. Use your skills to crack a hashed password and gain access.</p>
-            <button onclick="startChallenge('password_cracking')">Start Challenge</button>
-        </div>
-
-        <div class="challenge">
-            <h3>Challenge 3: Phishing Attack</h3>
-            <p>Understand the dangers of phishing attacks. Identify a fake login page and avoid falling for a scam.</p>
-            <button onclick="startChallenge('phishing_attack')">Start Challenge</button>
-        </div>
-    </section>
-
-    <section id="leaderboard">
-        <h2>Leaderboard</h2>
-        <p>See how you rank compared to other players!</p>
-        <ul>
-            <li>Player 1 - 300 points</li>
-            <li>Player 2 - 250 points</li>
-            <li>Player 3 - 200 points</li>
-        </ul>
-    </section>
-
-    <section id="resources">
-        <h2>Resources</h2>
-        <p>Expand your knowledge by exploring these learning materials:</p>
-        <ul>
-            <li><a href="https://www.cybrary.it">Cybrary - Free Cybersecurity Courses</a></li>
-            <li><a href="https://www.hackthebox.eu">Hack The Box - Capture The Flag Challenges</a></li>
-            <li><a href="https://www.udemy.com/courses/search/?q=cybersecurity">Udemy - Cybersecurity Courses</a></li>
-        </ul>
-    </section>
+        <section id="hint">
+            <h2>Hint</h2>
+            <p>If you are stuck, try using SQL Injection techniques such as `' OR 1=1 --` in the username or password fields.</p>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Hack or Be Hacked. All Rights Reserved.</p>
+        <p>&copy; 2024 Hack or Get Hacked CTF. All rights reserved.</p>
     </footer>
 </body>
 </html>
